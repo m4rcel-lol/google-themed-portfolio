@@ -25,7 +25,7 @@
 
   <p align="center">
     <strong>Aesthetically precise. Contextually intelligent.</strong><br>
-    Built for <b>Marcel</b>, a Full Stack Developer & Creative Coder from Poland. However it's is easy to edit, so feel free to use it. :)
+    Built for <b>Marcel</b>, a Full Stack Developer & Creative Coder from Poland.
   </p>
 </div>
 

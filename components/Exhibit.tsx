@@ -4,6 +4,20 @@ import { Text, Image, useCursor } from '@react-three/drei';
 import * as THREE from 'three';
 import { Project } from '../types';
 
+// Fix: Add global type declarations for React Three Fiber elements to resolve JSX errors
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      group: any;
+      mesh: any;
+      boxGeometry: any;
+      meshStandardMaterial: any;
+      planeGeometry: any;
+      spotLight: any;
+    }
+  }
+}
+
 interface ExhibitProps {
   project: Project;
   position: [number, number, number];

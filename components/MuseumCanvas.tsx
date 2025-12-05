@@ -11,9 +11,20 @@ interface MuseumCanvasProps {
   onProjectSelect: (p: Project | null) => void;
 }
 
+// Fix: Add global type declarations for React Three Fiber elements to resolve JSX errors
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      group: any;
+      mesh: any;
+      planeGeometry: any;
+      meshStandardMaterial: any;
+      ambientLight: any;
+    }
+  }
+}
+
 const Rig = ({ activeProject }: { activeProject: Project | null }) => {
-  const vec = new THREE.Vector3();
-  
   useFrame((state) => {
     if (activeProject) {
       // Find the index to calculate position (matching the generation logic below)
