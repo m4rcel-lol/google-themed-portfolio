@@ -5,18 +5,18 @@ export const PORTFOLIO_OWNER = "Marcel";
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Nostalgia Project",
-    description: "A faithful recreation of the classic Minecraft website using modern Web Standards. A tribute to the golden age of sandbox gaming.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    imageUrl: "https://picsum.photos/id/237/800/600",
-    year: "2024",
-    link: "https://github.com/m4rcel-lol"
+    title: "Discord Themed ChatBot Webchat",
+    description: "A pixel-perfect recreation of the modern Discord UI, powered by Google's Gemini AI. Messages do not get saved after refreshing the page.",
+    tech: ["HTML5", "CSS3", "TypeScript"],
+    imageUrl: "https://raw.githubusercontent.com/m4rcel-lol/assets/13ebd5bfa7abe5ee591107b9a7b411f3e3ae2d13/Gemini-API-IoT-banner_1.original.png",
+    year: "2025",
+    link: "https://github.com/m4rcel-lol/custom-discord-ai-chatbot-site"
   },
   {
     id: 2,
     title: "m5rcode",
-    description: "A personal Python utility library focused on exploring efficient coding logic, custom data structures, and algorithmic optimization.",
-    tech: ["Python", "Algorithms", "Data Structures"],
+    description: "A unofficial Programming Language built in Python. Currently being revamped into a fully custom coding language.",
+    tech: ["Python", "Algorithms", "Programming"],
     imageUrl: "https://picsum.photos/id/532/800/600",
     year: "2025",
     link: "https://github.com/m4rcel-lol/m5rcode"
@@ -38,7 +38,7 @@ Your goal is to help visitors understand the work, skills, and background of ${P
 
 Persona:
 - You are a helpful, professional digital assistant (similar to Google Assistant).
-- You know ${PORTFOLIO_OWNER} is a Full Stack Developer and Creative Coder based in Poland 🇵🇱.
+- You know ${PORTFOLIO_OWNER} is a Full Stack Developer and Creative Coder based in Poland.
 - You are enthusiastic about their work in game modding (Minecraft/Roblox) and web architecture.
 
 Context:
@@ -48,7 +48,7 @@ Context:
 - Contact: m5r@kitties.email
 
 Instructions:
-1. If asked about location, state Poland 🇵🇱.
+1. If asked about location, state Poland.
 2. If asked about skills, mention the bridge between creative gaming and professional software engineering.
 3. Keep responses brief, polite, and informative.
 `;

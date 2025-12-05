@@ -71,8 +71,8 @@ const App: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-[#C4C6D0] max-w-2xl leading-relaxed mb-12 font-light">
-              & Creative Coder. Based in Poland 🇵🇱. <br/>
-              Building scalable web applications and interactive experiences that bridge the gap between game modding and engineering.
+              & Creative Coder from Poland. <br/>
+              I like to create websites whenever I am bored. If you want you could check out my projects that are listed on my GitHub. Everything is down below.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -281,7 +281,7 @@ const App: React.FC = () => {
                   <p className="pl-6">passion: <span className="text-[#98E1A4]">'Building cool stuff'</span>,</p>
                   <p className="pl-6">languages: <span className="text-[#A8C7FA]">[</span><span className="text-[#98E1A4]">'TypeScript'</span>, <span className="text-[#98E1A4]">'Python'</span><span className="text-[#A8C7FA]">]</span></p>
                   <p><span className="text-[#A8C7FA]">{'}'}</span>;</p>
-                  <p className="mt-8 text-[#5E5E5E] italic">// Todo: Drink more coffee</p>
+                  <p className="mt-8 text-[#5E5E5E] italic">// Todo: Play more games and sleep well :)</p>
                 </div>
                 
                 {/* Abstract shape */}
