@@ -6,19 +6,6 @@ import Exhibit from './Exhibit';
 import { Project } from '../types';
 import { PROJECTS } from '../constants';
 
-// Augment JSX.IntrinsicElements to include React Three Fiber elements
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      ambientLight: any;
-      group: any;
-      mesh: any;
-      planeGeometry: any;
-      meshStandardMaterial: any;
-    }
-  }
-}
-
 interface MuseumCanvasProps {
   activeProject: Project | null;
   onProjectSelect: (p: Project | null) => void;

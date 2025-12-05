@@ -15,39 +15,42 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0 }
       }}
-      className="group relative bg-[#1E1F20] rounded-[32px] overflow-hidden border border-[#444746] hover:border-[#A8C7FA] transition-colors duration-300 flex flex-col h-full"
+      className="group relative bg-[#282A2F] rounded-[24px] overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#000000]/40 flex flex-col h-full hover:-translate-y-1"
     >
+      {/* State Layer Overlay (Hover effect) */}
+      <div className="absolute inset-0 bg-[#A8C7FA] opacity-0 group-hover:opacity-[0.08] transition-opacity duration-300 pointer-events-none z-0" />
+
       {/* Image Container */}
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-56 overflow-hidden">
         <img 
           src={project.imageUrl} 
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1E1F20] to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#282A2F] to-transparent opacity-40" />
         
         {project.year && (
-          <div className="absolute top-4 right-4 bg-[#131314]/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-[#E3E3E3] border border-[#444746]">
+          <div className="absolute top-4 right-4 bg-[#111318]/60 backdrop-blur-md px-3 py-1 rounded-[8px] text-xs font-medium text-[#E2E2E9] tracking-wide border border-[#44474E]/30">
             {project.year}
           </div>
         )}
       </div>
 
       {/* Content */}
-      <div className="p-6 md:p-8 flex flex-col flex-1">
-        <h3 className="text-2xl font-semibold text-[#E3E3E3] mb-3 group-hover:text-[#A8C7FA] transition-colors">
+      <div className="p-6 flex flex-col flex-1 relative z-10">
+        <h3 className="text-[22px] leading-tight font-normal text-[#E2E2E9] mb-2">
           {project.title}
         </h3>
         
-        <p className="text-[#C4C7C5] leading-relaxed mb-6 flex-1">
+        <p className="text-[#C4C6D0] text-sm leading-relaxed mb-6 flex-1 tracking-wide">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap gap-2 mb-8">
           {project.tech.map((t) => (
             <span 
               key={t} 
-              className="px-3 py-1 bg-[#303030] text-[#E3E3E3] text-sm rounded-lg border border-[#444746]"
+              className="px-3 py-1.5 bg-[#1E1F25] text-[#E2E2E9] text-xs font-medium rounded-[8px] border border-[#44474E]/50"
             >
               {t}
             </span>
@@ -58,10 +61,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           href={project.link || "#"}
           target={project.link ? "_blank" : "_self"}
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-[#A8C7FA] hover:text-[#D3E3FD] font-medium text-sm mt-auto group/link"
+          className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-full bg-[#33353A] text-[#A8C7FA] hover:bg-[#3E4759] hover:text-[#D6E3FF] transition-colors font-medium text-sm"
         >
           View Project
-          <ArrowUpRight size={16} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+          <ArrowUpRight size={18} />
         </a>
       </div>
     </motion.div>
